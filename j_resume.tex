@@ -1,29 +1,26 @@
+\documentclass[a4paper, oneside, final]{scrartcl}
 
 
-\documentclass[a4paper, oneside, final]{scrartcl} 
-
-\usepackage{scrpage2} 
-\usepackage{titlesec} 
-\usepackage{marvosym} 
-\usepackage{tabularx,colortbl} 
-\usepackage{fontspec} 
+\usepackage{scrlayer-scrpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage{tabularx,colortbl}
+\usepackage{fontspec}
 \usepackage{multicol}
-\usepackage{luatex85}
+\usepackage{fontawesome}
+
 \title{CV for Jason McGillivray}
 \author{Jason McGillivray}
-\date {October 2016}
+\date {July 2021}
 
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont[BoldFont={AGaramondPro-Bold}] {Adobe Garamond Pro} % Main document font and bold font
 
+
 \titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule] % Section formatting
-
 \pagestyle{scrheadings} % Print the headers and footers on all pages
-
-\addtolength{\voffset}{-0.9in} 
-
-\addtolength{\textheight}{5cm} 
-
+\addtolength{\voffset}{-0.9in}
+\addtolength{\textheight}{5cm}
 
 \newcommand{\gray}{\rowcolor[gray]{.90}}
 
@@ -32,125 +29,110 @@
 \renewcommand{\headfont}{\normalfont\rmfamily\scshape} % Font settings for footer
 
 \cofoot{
-\addfontfeature{LetterSpace=20.0}\fontsize{12.5}{17}\selectfont % Letter spacing and font size
+\addfontfeature{LetterSpace=16.0}\fontsize{12}{12}\selectfont % Letter spacing and font size
 
-6133 Duncan Street{\large\textperiodcentered} Halifax NS{\large\textperiodcentered} Canada B3L 1K1\\ % Your mailing address
-{\Large\Letter} McGillivray.Jason@gmail.com \ {\Large\Telefon} (902) 789 2470 % Your email address and phone number
+79 Gordon Ave {\large\textperiodcentered} Halifax NS{\large\textperiodcentered} Canada B3M 2X5\\
+
+{\Large\Letter} McGillivray.Jason@gmail.com \ {\Large\Telefon} (902) 789 2470\\
+{\Large\faGithub} mcgillij {\Large\faGlobe} mcgillij.dev
 }
 
+
 \begin{document}
-
 \begin{center} % Center everything in the document
-
 % HEADER SECTION
 
-{\addfontfeature{LetterSpace=20.0}\fontsize{20}{20}\selectfont\scshape Jason McGillivray} % Your name at the top
+{\addfontfeature{LetterSpace=20.0}\fontsize{20}{20}\selectfont\scshape Jason McGillivray}
 
-\vspace{.3cm} % Extra whitespace after the large name at the top
+\vspace{.2cm} % Extra whitespace after the large name at the top
 
-%    OBJECTIVE
-
+% OBJECTIVE
 \section{Objective}
-Results-driven with 17 years of engineering and development experience looking to continue my career in the IT sector as a software developer.
-
-%    SKILLS
+Results-driven with 20 years of development experience looking to continue my career as a software engineer / DevOps.
+% SKILLS
 
 \section{Skills}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Computer Languages & Perl, Python, PHP, Splunk, Ruby, Java, C, C++, Powershell, jQuery, JS, SQL \\
-Protocols \& Web APIs & RESTful Web-Services, SOAP\\
+Computer Languages & Perl, Python, PHP, Ruby, Java, C, C++, sh, Powershell, JS, SQL \\
+Protocols \& Web APIs & RESTful Web-Services, SOAP, Ember, Node, React, GRPC\\
 Databases & PostgreSQL, DB2, SQLite, Sybase, MySql, Microsoft SQL \\
-Tools & Vi, Eclipse, Curl, Twiki, CPAN, DBArtisan, Ant, Ivy, Git, LaTeX\\
-Operating Systems & Linux, Solaris, FreeBSD, OpenBSD, HP-UX, Windows, OS X\\
+Operating Systems & Linux, Solaris, FreeBSD, OpenBSD, Windows, OS X\\
+DevOps & Jenkins, Docker, Terraform, AWS, Ansible, Datadog, Git, Splunk\\
+Machine Learning& Tensorflow, spaCy, Deepspeech, Tesseract\\
 Languages & Bilingual English \& French\\
 \end{tabular}
 
-%    WORK EXPERIENCE
+
+% WORK EXPERIENCE
 
 \section{Work Experience}
 
+
 \begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
-\gray Period & \textbf{2009 --- Present}\\
-\gray Employer & \textbf{NTT Data --- Morgan Stanley Mobile Computing} \hfill Halifax, NS\\
+\gray Period & \textbf{2019 --- Present}\\
+\gray Employer & \textbf{AnalyzeRE} \hfill Halifax, NS\\
+\gray Job Title & \textbf{Senior Software Dev, DevOps}\\
+\gray Languages & \textbf{Python, C++, Terraform/HCL, Bash, Groovy, Wiki}\\
+\gray Tech & \textbf{Linux, Docker, AWS, Django, Terraform}\\
+
+& At AnalyzeRE I focused more on the DevOps side, since their DevOps had left their infrastructure in shambles.
+
+\begin{itemize}
+\item \textbf {Build} Dockerized the build process, allowing cattle vs pet build boxes
+\item \textbf {Automation} Ported their 150~ manually configured build jobs to Jenkinsfiles accross all repositories
+\item \textbf {Build} Consolidated the build process to allow the local development and Jenkins to use the same workflows
+\item \textbf {Migration} Migrated legacy SaltStack manual provisioning and orchestration to automated Terraform
+\item \textbf {Infra} Overhauled the old insecure infrastructure design to a cloud native solution, using Terraform and Packer
+\item \textbf {Design} Designed version 2 cloud native infrastructure to be entirely serverless for the new iteration of the product
+\item \textbf {Infra} Moved from  manually provisioned compute resources to auto-scaling spot fleets for build systems, reducing cost by 90\%
+\item \textbf {QA} Built out benchmarking framework to allow spotting trends in performance over master builds.
+
+\end{itemize}
+
+\end{tabularx}
+
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+\gray Period & \textbf{2017 --- 2019}\\
+\gray Employer & \textbf{AIOTV} \hfill Halifax, NS\\
+\gray Job Title & \textbf{Senior Software Dev, Scrum Master / Team Lead}\\
+\gray Languages & \textbf{Python, Groovy, JS, React, Redux, RxJS, Wiki}\\
+\gray Tech & \textbf{Linux, Docker, AWS, Django, Elasticsearch, React, NX, Terraform}\\
+\gray QA& \textbf{pytest, selenium, splinter, Gherkin}\\
+& At AIOTV I encountered many interesting opportunities to wear many hats.
+
+\begin{itemize}
+\item \textbf {Lead} code review, pair programming, mentoring, documentation for our tech stack and APIs.
+\item \textbf {Scrum} worked with the CEO, VP and UX to plan and implement the next steps for our products.
+\item \textbf {Dev} Built out a back-end API for our React / Redux / RxJS front-end to consume our metadata services.
+\item \textbf {Dev} Wrote a machine learning ad placement recommendation engine.
+\item \textbf {Dev} Built out elasticsearch indexing and dockerized deployment.
+\item \textbf {DevOps} Optimization of our infrastructure and code-base to process large volume video processing.
+\item \textbf {DevOps} Implemented a CI process using Jenkins, Github, AWS ECR and Docker due to our DevOps leaving.
+\item \textbf {QA} Spear headed the transition from manual to automated QA Testing with Unit, Integration and Automated Acceptance tests.
+
+\end{itemize}
+
+\end{tabularx}
+
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+\gray Period & \textbf{2004 --- 2016}\\
+\gray Employer & \textbf{Morgan Stanley Mobile/Remote Computing} \hfill Halifax, NS\\
 \gray Job Title & \textbf{Mobile Development Principal Consultant}\\
 \gray Languages & \textbf{Perl, Python, Java, jQuery, MySQL, PostgreSQL, Sybase}\\
 \gray Tech & \textbf{Linux, Windows, Blackberry Enterprise Server, MobileIron, MobileGuard, LDAP, ActiveDirectory, MQ}\\
-& Working with the Mobile teams I wrote many interesting apps and processes below are a few:
+& Working for the Remote/Mobile teams allowed me to write many interesting apps and processes below are a few:
 
 \begin{itemize}
-   \item \textbf{SMS Archiving}:  background scripts and processes for the Firms SMS archiving to comply with Legal and Compliance standards archiving millions of messages per month into our Zantaz vault.
-   \item \textbf{MobileIron Drift}: web app that higlights the configuration differences between all the MobileIron system and application level configurations.
-   \item \textbf{Helpdesk User Look-up}: web app for our help-desk to allows querying of the MI infra for user devices, phone numbers, application entitlements, enrollment and geographical regions over the span of our global deployments.
-   \item \textbf{MobileRFB}: Ready for Business process automation, this web application replaces a manual process that takes the L2 Ops team several hours daily with a dashboard to the metrics it needs to track daily.
-   \item \textbf{IMAD}: Immediate disablement for emergency terminations, this process goes through and disables a users mobile device, ldap information, windows / linux accounts, exchange mailboxes.
-   \item \textbf{UMP}: Universal Mobile Provisioning reads the firms HR published stream for termination, lost or stolen device requests, and ushers them off to specialized "connectors" which each handle their own disabling using MQ's.
+\item \textbf{SMS Archiving}: processe for the Firms SMS archiving to comply with Legal and Compliance standards archiving millions of messages per month into our Zantaz vault.
+\item \textbf{MobileIron Drift}: web app highlighting the configuration differences between all the MobileIron system and application level configurations globally.
+\item \textbf{Helpdesk User Look-up}: web app for our help-desk to allows querying of the MI infra for user devices, phone numbers, application entitlements, enrollment and geographical regions over the span of our global deployments.
+\item \textbf{MobileRFB}: Ready for Business process automation. Web dashboard to replace a manual process and to track daily statistics.
+\item \textbf{IMAD}: Immediate disablement for emergency terminations. Process to disables a users mobile device, LDAP accounts, windows / Linux accounts, exchange mailboxes, etc.
+\item \textbf{UMP}: Reads the firms HR published CPS stream for hiring/termination, lost or stolen device requests, and ushers them off to specialized MQ's / endpoints.
+\item \textbf{FlexBook}: Ruby on Rails app to allow desk reservation / hoteling for remote users returning to the office.
+\item \textbf{BES RDS}: Reporting framework for our BES Servers to gain insights into our users behaviors and usage statistics.
 \end{itemize}
-All my projects include wiki release documentation and support information along with production deployment instructions. Tasked with technical interviews for all new potential candidates.
-\end{tabularx}
-
-
-
-\vspace{12pt}
-
-\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
-\gray Period & \textbf{2007 --- 2009}\\
-\gray Employer & \textbf{Keane Canada --- Morgan Stanley Remote Computing} \hfill Halifax, NS\\
-\gray Job Title & \textbf{Mobile Engineering Principal Consultant}\\
-\gray Languages & \textbf{Perl, Python, Ruby, Rails, Django, Java, Sybase, MSSQL, MySQL, PostgreSQL, Bash, KSH}\\
-\gray Tech & \textbf{Linux, Solaris, Windows, MacOS, Blackberry Enterprise Server, LDAP, CVS, SVN}\\
-& Designed a highly visible Ruby on Rails application for Morgan Stanley to allow transient employee's to reserve various internal resources ( hotel'ing desks, seats, workstations, meeting rooms ). Using agile development methodologies along with test driven development we completed the project in a very short time frame.
-The secondary purpose of this project was to champion the Ruby language into one of the Firms approved languages as it was not fully approved at the time.
-
-In this time I also created the Blackberry server reporting framework which allowed the creation of daily reports to be exported from the BES databases that were merged from all our regions worldwide.
-
-I also wrote and maintained several web applications that were used extensively by our Ops team to manage the blackberry servers and devices.
-\end{tabularx}
-
-\vspace{12pt}
-
-\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
-\gray Period & \textbf{2007}\\
-\gray Employer & \textbf{Keane Canada --- Fidelity Investments} \hfill Halifax, NS\\
-\gray Job Title & \textbf{Senior Java Consultant}\\
-\gray Languages & \textbf{Java, Flex, ActionScript, XDoclet, Ant, Bash}\\
-\gray Tech & \textbf{Redhat Linux, Windows, Oracle DB, CVS}\\
-& Wrote a series of automation scripts using Java, Ant and Bash, to allow the automatic conversion of the teams Java back-end to be converted to ActionScript Objects (for use with Adobe Flex) for usage in the front-end application, saving considerable man hours.
-Created a library of custom graphical components in Flex 2.0 for the team to use in building their applications.
-Setup and maintained the teams source control server, and wrote documentation and taught classes on how to use source control in a team environment.
-\end{tabularx}
-
-\vspace{12pt}
-
-\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
-\gray Period & \textbf{2007}\\
-\gray Employer & \textbf{Keane Canada --- Center of Excellence} \hfill Halifax, NS\\
-\gray Job Title & \textbf{LiveCycle Administrator / Programmer}\\
-\gray Languages & \textbf{Java J2EE, LiveCycle, Flex, Flex Data Services, Ruby, Rails, PHP}\\
-\gray Tech & \textbf{Linux, Jboss, JNDI, PDF, Subversion, NetBeans}\\
-& Created a tech demo application that was shown off at the Acord conference in Flordia, where the application received a warm reception from the insurance agencies. The application bridged the workflow between various technologies using a J2EE backend / LiveCycle data services, aggregating data from multiple web services using a Flex front-end written with the Cairngorm MVC framework and generating PDF's.
-
-Wrote documentation and taught classes on writing J2EE web-services, MVC design patterns, Unit testing, Source Control with Subversion, Test Driven Development, Ruby and Rails. These seminars convinced many other team leads to adopt some of the concepts within their respective teams and personal projects.
-\end{tabularx}
-
-\vspace{12pt}
-
-
-\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
-\gray Period & \textbf{2005 --- 2007}\\
-\gray Employer & \textbf{Keane Canada --- Morgan Stanley Remote Computing} \hfill Halifax, NS\\
-\gray Job Title & \textbf{Senior Engineering Consultant}\\
-\gray Languages & \textbf{Bash, Ksh, Perl, Python, ASP, PHP}\\
-\gray Tech & \textbf{Linux, Solaris, Windows, Juniper Routers, Cisco and Avaya Hardware, Autosys, VMS, AFS}\\
-& Administered the firms remote computing border gateways and Juniper Internet Gateway Appliances, and acted as a liason to the vendors. Completed several upgrade migration paths for our twenty thousand remote computing users to our new infrastructure.
-
-Wrote a suite of Perl scripts to automate the scanning of our appliances and server farms around the world for SNMP reporting. Generated MRTG reports and configuration files for all the remote computing infrastructure, dynamically loadable from a Sybase database view-able as a dashboard layout.
-
-Implemented a Single-Sign On with our Juniper IVE's, WholeSecurity and SiteMinder to create a seamless passing of credentials to all internal applications from the remote computing infrastructure. Maintained all the Solaris boxes and WholeSecurity installations for the remote computing team.
-
-Created a statistical analysis dashboard and parsing scripts used to monitor usage metrics for our Citrix gateway farms and other remote applications.
-
-Created numerous run-books and documentation for each of the processes that I implemented.
 \end{tabularx}
 
 \vspace{12pt}
@@ -162,13 +144,14 @@ Created numerous run-books and documentation for each of the processes that I im
 \gray Languages & \textbf{Perl, PHP, Python, C, PostgreSQL}\\
 \gray Tech & \textbf{Linux, Kernel Modules, VPN, Point to point Tunneling Protocol, NAS, Exim, SNORT}\\
 
-& Working directly with the CEO of the company, I created a Linux Live-CD distribution with built in PPTP VPN server infrastructure.
+& Working with the CEO, I created a Linux Live-CD distribution with built in PPTP VPN server infrastructure.
 Implemented our servers IDS systems using custom written SNORT rules, along with spam-assassin filtering for our Email servers and Clam-av scanning of attachments.
 Designed an automated installation procedure for spinning up new server hardware and integrating it into our environment.
 Setup automated penetration testing on our network and application levels to help mitigate the risk of breaches to our company servers.
 Wrote all of our internal web administration framework that allowed us to configure our server farm and user databases.
 
 \end{tabularx}
+
 
 \vspace{12pt}
 
@@ -180,18 +163,17 @@ Wrote all of our internal web administration framework that allowed us to config
 \gray Tech & \textbf{Linux, FreeBSD, IPFW, IPTables, Firewalls, MacOS, CodeWarrior}\\
 
 & Designed and implemented a secure B2B E-Commerce contract bidding website from concept to maturity.
-Setup and administered all of the company's servers (web, firewalls, databases, load balancers, source control, dev and qa environments).
-Managed a team of 6 junior programmers and mentored them with the concepts introduced by the challenges of building our application.
+Setup and administered all of the company's servers (web, firewalls, databases, load balancers, source control, DEV, QA and Prod envs).
+Managed a team of 6 junior programmers and mentored them with the concepts introduced by the challenges of building out our application and infrastructure.
 
 \end{tabularx}
-
 
 \vspace{12pt}
 
 \begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
 \gray Period & \textbf{2000 --- 2002}\\
 \gray Employer & \textbf{Open-Source Directory} \hfill Moncton, NB\\
-\gray Job Title & \textbf{Lead Developer / Administrator}\\
+\gray Job Title & \textbf{Lead Developer / Co-Founder}\\
 \gray Languages & \textbf{Perl, PHP, Python, C, MySQL, Mailman, Postfix, XML, PostgreSQL}\\
 \gray Tech & \textbf{Linux, FreeBSD, IPFW, IPTables, Firewalls}\\
 
@@ -202,51 +184,39 @@ Developed an XML-exportable database for data exchange between organizations.
 Helped in the design process of the Open-Source Logo that's still in use today to represent open-source applications around the world.
 \end{tabularx}
 
-
-\vspace{12pt}
-
-\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
-\gray Period & \textbf{1999 --- 2000}\\
-\gray Employer & \textbf{Roswell Computer Books} \hfill Moncton, NB / Halifax , NS\\
-\gray Job Title & \textbf{Lead Developer / Administrator}\\
-\gray Languages & \textbf{Perl, PHP, Python, MySQL,  XML}\\
-\gray Tech & \textbf{Linux, MySQL, Mailman, Postfix}\\
-
-& Created an E-Commerce book marketplace for Roswell computer books that was used by both of their store locations (Moncton and Halifax).
-This included an inventory system for each of the stores, and building up and automating the server infrastructure required to host the site.
-\end{tabularx}
-
-%    EDUCATION
+% EDUCATION
 
 \section{Education}
 
 \begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+\gray Period & \textbf{1999-2000}\\
+\gray Institution & \textbf{Mount Allison, University} \hfill Sackville, NB\\
 \gray Period & \textbf{2000-2002}\\
-\gray Program & \textbf{Web Master}\\
 \gray Institution & \textbf{Dal, University} \hfill Halifax, NS\\
 %&
-
 \end{tabularx}
 
-%    REFERENCES
+% REFERENCES
 
 \section{References}
-
 \begin{tabular}{ l c r @{} >{\bfseries}l @{\hspace{6ex}} l }
-\gray Reference & {Elias Koutsoubis}  \\
-\gray Position &  VP Mobile Engineering - Morgan Stanley\\
-\gray {\Large\Telefon} & (917) 318-0990 \\
-\gray {\Large\Letter} & elias.koutsoubis@morganstanley.com\\
+
+\gray Reference & {Blair Day} \\
+\gray Position & EVP AIOTV\\
+{\Large\Telefon} & (720) 666-8264 \\
+{\Large\Letter} & blairdayco@gmail.com\\
 \\
-\gray Reference & {June Young}  \\
-\gray Position &  Morgan Stanley Dev\\
-\gray {\Large\Telefon} & (902) 441-4013 \\
-\gray {\Large\Letter} & june.young@morganstanley.com\\
+\gray Reference & {Dayne May} \\
+\gray Position & Senior Software Dev - Beyond Trust\\
+{\Large\Telefon} & (902) 401-0305 \\
+{\Large\Letter} & daynemay@gmail.com\\
 \\
 \gray Reference & David Weinberg\\
-\gray Position &  Morgan Stanley Dev\\
+\gray Position & Senior Software Dev - Morgan Stanley\\
 {\Large\Telefon} & (902) 497-2944\\
 {\Large\Letter} & david.weinberg@morganstanley.com\\
+\\
+
 
 \end{tabular}
 \end{center}
